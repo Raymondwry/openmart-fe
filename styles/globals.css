@@ -19,6 +19,9 @@
 body {
   background-color: rgb(var(--background-start-rgb)); 
   color: rgb(var(--foreground-rgb));
+  padding: 0;
+  margin: 0;
+  height: 100vh;
 }
 
 @layer utilities {
@@ -27,11 +30,12 @@ body {
   }
 }
 
-/* Tailwind CSS Custom Styles */
 .table-cell {
-  width: 200px;
-  height: 34px;
-  padding: 1rem; /* Tailwind's p-4 */
+  height: 24px; 
+  padding: 2px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .text-right {
@@ -39,15 +43,14 @@ body {
 }
 
 .hover-blue-columns .ant-table-cell {
-  width: 200px;
-  height: 34px;
-}
-
-.hover-blue-columns .ant-table-thead > tr > th {
   transition: background-color 0.3s;
 }
 
 .hover-blue-columns .ant-table-thead > tr > th:hover,
 .hover-blue-columns .ant-table-cell:hover {
   background-color: lightblue; 
+}
+
+.table-hover-column tbody tr:hover > td {
+  background-color: lightblue;
 }
