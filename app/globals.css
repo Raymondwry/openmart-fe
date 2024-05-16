@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-start-rgb: 255, 255, 255; 
+  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-start-rgb: 32, 32, 32;
+    --background-end-rgb: 45, 45, 45;
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  background-color: rgb(var(--background-start-rgb)); 
+  color: rgb(var(--foreground-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-align: justify; 
+  }
+}
+
+/* Tailwind CSS Custom Styles */
+.table-cell {
+  width: 200px;
+  height: 34px;
+  padding: 1rem; /* Tailwind's p-4 */
+}
+
+.text-right {
+  text-align: right;
+}
+
+.hover-blue-columns .ant-table-cell {
+  width: 200px;
+  height: 34px;
+}
+
+.hover-blue-columns .ant-table-thead > tr > th {
+  transition: background-color 0.3s;
+}
+
+.hover-blue-columns .ant-table-thead > tr > th:hover,
+.hover-blue-columns .ant-table-cell:hover {
+  background-color: lightblue; 
+}
